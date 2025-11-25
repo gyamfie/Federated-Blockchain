@@ -112,7 +112,7 @@ def simulate_fbs_transaction(num_devices: int, key_size: int, data_size: int, ru
     return total_time / success_count, (data_size / 1024**2) / (total_time / success_count), total_energy / success_count
 
 # ========================= RUN EXPERIMENTS =========================
-print("Starting experiments aligned with IEEE paper results...")
+print("Start the experiments")
 for num_dev in NUM_DEVICES_RANGE:
     for key_size in KEY_SIZES:
         for data_size in DATA_SIZES:
