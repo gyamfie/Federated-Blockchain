@@ -2,7 +2,7 @@
 This repository contains the complete experimental setup used in the paper
 “A Federated Blockchain Security for MEC-enabled IoT Networks in Industrial 5.0”
 including hardware configuration, software stack, dataset, blockchain network, and training/evaluation scripts that reproduce the results in Section IV (Experimental Setup) and Section V (Results).
-# Hardware Testbed (Real Deployment – Figure 9 of the paper)
+# Hardware Testbed
 
 IIoT End Devices ---> Raspberry Pi 4 Model B (4 GB RAM),12,Sensors (IIoT nodes)
 Malicious IIoT Node (Attacker)---> Raspberry Pi 4 Model B,1,Spoofing & anomalous key requests
@@ -32,5 +32,12 @@ peer chaincode install -n fbsiot -v 1.0 -p fbs_iot.tgz -l python
 peer chaincode instantiate -n fbsiot -v 1.0 -C mychannel \
     -c '{"Args":[]}' --collections-config ./collections.json
 
+# How to use the code:
+1. Train the ML model using the New_Dataset and the
+2. Save the ML trained code as s Pickle file (. pkl) and deploy it to the server
+3. verify the performance using the test dataset extracted from the New_Dataset.csv file.
+4. Setup the Hyperledger fibric and run the
+5. Setup a rest api for the ML and the hyperledger
+6. Deploy Experiment_sim.py file to the IoT device and Run the simulation  
 
 
