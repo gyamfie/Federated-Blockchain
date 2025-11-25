@@ -23,6 +23,7 @@ including hardware configuration, software stack, dataset, blockchain network, a
 cd blockchain/chaincode
 
 tar cfz code.tar.gz fbs_iot.py
+
 tar cfz fbs_iot.tgz metadata.json code.tar.gz
 
 # 2. Install on peer
@@ -33,11 +34,11 @@ peer chaincode instantiate -n fbsiot -v 1.0 -C mychannel \
     -c '{"Args":[]}' --collections-config ./collections.json
 
 # How to use the code:
-1. Train the ML model using the New_Dataset and the
+1. Train the ML model using the New_Dataset and the ML_Key_verify.py
 2. Save the ML trained code as s Pickle file (. pkl) and deploy it to the server
-3. verify the performance using the test dataset extracted from the New_Dataset.csv file.
-4. Setup the Hyperledger fibric and run the
+3. verify the performance using the test dataset extracted data from the New_Dataset.csv file.
+4. Setup the Hyperledger fibric and run the fabric_chaincode.py
 5. Setup a rest api for the ML and the hyperledger
-6. Deploy Experiment_sim.py file to the IoT device and Run the simulation  
+6. Deploy Experiment_sim_iot.py file to the IoT device and Run the simulation  
 
 
