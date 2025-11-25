@@ -32,16 +32,5 @@ peer chaincode install -n fbsiot -v 1.0 -p fbs_iot.tgz -l python
 peer chaincode instantiate -n fbsiot -v 1.0 -C mychannel \
     -c '{"Args":[]}' --collections-config ./collections.json
 
-# Citation
-@ARTICLE{gyamfi2025federated,
-  author    = {Eric Gyamfi and James Adu Ansere and Mohsin Kamal and ...},
-  journal   = {IEEE Transactions on Industrial Informatics},
-  title     = {A Federated Blockchain Security for MEC-enabled IoT Networks in Industrial 5.0},
-  year      = {2025},
-  volume    = {},
-  number    = {},
-  pages     = {},
-  doi       = {},
-  ISSN      = {},
-  month     = {}
-}
+
+
